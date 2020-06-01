@@ -39,7 +39,6 @@ public class Queue {
     }
 
     public int remove() {
-        // Save the data
         // Point the head to the next element (effectively removing it)
         // Then return the data
 
