@@ -46,7 +46,7 @@ public class BinarySearchTree {
         }
         return null;
 
-        // Note: Duplicate keys aren't allowed (so we don't need to check for that)
+        // Note: Duplicate keys aren't allowed 
     }
 
     // Insert
@@ -56,7 +56,6 @@ public class BinarySearchTree {
 
     public Node insertItem(Node node, int key, String value) {
 
-        // If null - set it here. We are done.
         if (node == null) {
             node = new Node(key, value);;
             return node;
@@ -70,14 +69,11 @@ public class BinarySearchTree {
         } if (key > node.key) {
             node.right = insertItem(node.right, key, value);
         }
-
-        // If we get here we have have hit the bottom our or tree with a duplicate.
-        // Since duplicates are not allowed in BSTs, simply ignore the duplicate,
-        // and return our fully constructed tree. We are done!
+       
         return node;
     }
 
-    // Delete: Three cases
+    // Delete
     // 1. No child
     // 2. One child
     // 3. Two children
