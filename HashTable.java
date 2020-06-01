@@ -78,26 +78,4 @@ public class HashTable {
         return index;
     }
 
-    @Override
-    public String toString() {
-        int bucket = 0;
-        StringBuilder hashTableStr = new StringBuilder();
-        for (HashEntry entry : data) {
-            if(entry == null) {
-                continue;
-            }
-            hashTableStr.append("\n bucket[")
-                    .append(bucket)
-                    .append("] = ")
-                    .append(entry.toString());
-            bucket++;
-            HashEntry temp = entry.next;
-            while(temp != null) {
-                hashTableStr.append(" -> ");
-                hashTableStr.append(temp.toString());
-                temp = temp.next;
-            }
-        }
-        return hashTableStr.toString();
-    }
-}
+    
